@@ -2,10 +2,12 @@ package com.example.spinnerapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,22 +21,31 @@ public class MainActivity extends AppCompatActivity {
     TextView output = null;
     CustomAdapter adapter;
     MainActivity activity = null;
+    Button btnSend;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         activity  = this;
 
         Spinner SpinnerExample = (Spinner)findViewById(R.id.spinner);
         output = (TextView)findViewById(R.id.output);
-
+        btnSend=findViewById(R.id.btn_send);
         // Set data in arraylist
         setListData();
 
         // Resources passed to adapter to get image
         Resources res = getResources();
+        btnSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,OtherActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // Create custom adapter object ( see below CustomAdapter.java )
         adapter = new CustomAdapter(activity, R.layout.spinner_rows, CustomListViewValuesArr,res);
