@@ -2,6 +2,11 @@ package com.example.spinnerapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Bundle;
+
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -14,49 +19,33 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
 
     /**************  Intialize Variables *************/
     public ArrayList<SpinnerModel> CustomListViewValuesArr = new ArrayList<SpinnerModel>();
     TextView output = null;
-    CustomAdapter adapter;
-    MainActivity activity = null;
-    Button btnSend,btnSecond;
+    SecondAdapter adapter;
+    SecondActivity activity = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_second);
 
 
         activity  = this;
 
         Spinner SpinnerExample = (Spinner)findViewById(R.id.spinner);
         output = (TextView)findViewById(R.id.output);
-        btnSend=findViewById(R.id.btn_send);
-        btnSecond=findViewById(R.id.btn_second);
         // Set data in arraylist
         setListData();
 
         // Resources passed to adapter to get image
         Resources res = getResources();
-        btnSend.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,OtherActivity.class);
-                startActivity(intent);
-            }
-        });
-        btnSecond.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,SecondActivity.class);
-                startActivity(intent);
-            }
-        });
+
 
         // Create custom adapter object ( see below CustomAdapter.java )
-        adapter = new CustomAdapter(activity, R.layout.spinner_rows, CustomListViewValuesArr,res);
+        adapter = new SecondAdapter(activity, R.layout.spinner_rows, CustomListViewValuesArr,res);
 
         // Set adapter to spinner
         SpinnerExample.setAdapter(adapter);

@@ -13,6 +13,9 @@
         android:id="@+id/spinner"
         android:drawSelectorOnTop="true"
         android:prompt="@string/defaultText"
+        style="@style/Widget.AppCompat.Spinner"
+        android:dropDownWidth="match_parent"
+        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
 
@@ -25,7 +28,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/output"
         />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_send"
         android:layout_width="fill_parent"
@@ -35,5 +37,16 @@
         android:padding="12dp"
         android:textColor="@color/white"
         android:text="OTHER"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_second"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:text="SECOND"/>
 
 </LinearLayout>

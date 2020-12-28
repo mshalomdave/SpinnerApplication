@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:paddingTop="20dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+<!--    <Spinner-->
+<!--        android:id="@+id/spinner"-->
+<!--        android:drawSelectorOnTop="true"-->
+<!--        style="@style/Widget.AppCompat.Spinner"-->
+<!--        android:dropDownWidth="match_parent"-->
+<!--        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"-->
+<!--        android:layout_width="fill_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        />-->
+    <!--  Company Details -->
+            <Spinner
+                android:id="@+id/spinner"
+                style="@style/Widget.AppCompat.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/dropdownListPreferredItemHeight"
+                android:prompt="@string/defaultText"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/spinner_bg"
+                android:dropDownWidth="match_parent"
+                android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+                android:popupBackground="@android:color/white"
+                android:popupElevation="3dp"
+                android:stateListAnimator="@drawable/spinner_sla" />
+
+
+    <TextView
+        android:paddingTop="20dip"
+        android:paddingLeft="20dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/output"
+        />
+
+
+</LinearLayout>
