@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     TextView output = null;
     CustomAdapter adapter;
     MainActivity activity = null;
-    Button btnSend,btnSecond;
+    Button btnSend,btnSecond,btnThird;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         output = (TextView)findViewById(R.id.output);
         btnSend=findViewById(R.id.btn_send);
         btnSecond=findViewById(R.id.btn_second);
+        btnThird=findViewById(R.id.btn_third);
         // Set data in arraylist
         setListData();
 
@@ -51,6 +52,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this,SecondActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnThird.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,ThirdActivity.class);
                 startActivity(intent);
             }
         });
