@@ -70,6 +70,7 @@ public class ThirdActivity extends AppCompatActivity {
          * The URL is defined in the second parameter
          * Then we have a Response Listener and a Error Listener
          * In response listener we will get the JSON response as a String
+         *Please note that the url can be customized according to your prference
          * */
         StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.43.149/MySales/MyApi.php?apicall=companylist",
                 new Response.Listener<String>() {
@@ -172,29 +173,4 @@ public class ThirdActivity extends AppCompatActivity {
 
     }
 
-
-
-
-    /****** Function to set data in ArrayList *************/
-//    public void setListData()
-//    {
-//
-//        // Now i have taken static values by loop.
-//        // For further inhancement we can take data by webservice / json / xml;
-//
-//        for (int i = 0; i < 11; i++) {
-//
-//            final SpinnerModel sched = new SpinnerModel();
-//
-//            /******* Firstly take data in model object ******/
-//            sched.setCompanyName("Company "+i);
-//            sched.setImage("image"+i);
-//            sched.setUrl("Check us out");
-//
-//
-//            /******** Take Model Object in ArrayList **********/
-//            CustomListViewValuesArr.add(sched);
-//        }
-//
-//    }
 }
