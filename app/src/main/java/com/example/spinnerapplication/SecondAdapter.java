@@ -81,10 +81,7 @@ class SecondAdapter extends ArrayAdapter<String> {
             label.setText(tempValues.getCompanyName());
             sub.setText(tempValues.getUrl());
 
-//            companyLogo.setImageResource(res.getIdentifier
-//                    ("com.androidexample.customspinner:drawable/"
-//                            + tempValues.getImage(),null,null));
-
+            //url can be changed
             String img="http://192.168.43.149/MySales/uploads/settings/logo.png";
             Long time=System.currentTimeMillis();
             Glide.with(getContext()).load(img).signature(new MediaStoreSignature(img,time,0)).into(companyLogo);
